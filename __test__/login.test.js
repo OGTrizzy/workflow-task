@@ -39,14 +39,13 @@ describe('Login Function', () => {
 });
 
 describe('Logout Function', () => {
-    it('should clear the token and profile from localStorage', () => {
-        
-        localStorage.setItem('token', 'fakeToken');
-        localStorage.setItem('profile', JSON.stringify({ name: 'John Doe' }));
+  it('should clear the token and profile from localStorage', () => {
+    localStorage.setItem('token', 'fakeToken');
+    localStorage.setItem('profile', JSON.stringify({ name: 'John Doe' }));
 
-        logout(); 
+    logout();
 
-        expect(localStorage.getItem('token')).toBeNull();
-        expect(localStorage.getItem('profile')).toBeNull();
-    });
+    expect(localStorage.getItem('token')).toBeNull();
+    expect(localStorage.getItem('profile')).toBeNull();
+  });
 });

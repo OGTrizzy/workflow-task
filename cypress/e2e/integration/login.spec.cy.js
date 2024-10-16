@@ -3,8 +3,8 @@ describe('Login Tests', () => {
     cy.visit('/');
     cy.get('input[name=username]').type('validUsername');
     cy.get('input[name=password]').type('validPassword');
-    cy.get('button[type=submit]').click(); 
-    cy.url().should('include', '/'); 
+    cy.get('button[type=submit]').click();
+    cy.url().should('include', '/');
   });
 });
 
@@ -18,6 +18,5 @@ it('should show a message when invalid credentials are provided', () => {
 
 it('should log out when the logout button is clicked', () => {
   cy.get('button#logout').click();
-  cy.url().should('include', '/'); 
+  cy.url().should('include', '/');
 });
-
