@@ -19,8 +19,16 @@
     "testEnvironment": "jsdom"
   },
   "lint-staged": {
-    "*.js": "eslint",
-    "type": "module"
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   },
   "keywords": [],
   "author": "Noroff",
